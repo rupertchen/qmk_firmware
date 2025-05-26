@@ -41,19 +41,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_BASE] = LAYOUT_ortho_5x12(
   KC_EQL, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS,
   KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLS,
-  KC_ESC, KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,
-  KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
-  KC_LCTL, KC_GRV, KC_CAPS, KC_LALT, KC_BSPC, MT(MOD_LCTL,KC_DEL), LT(_LOWER,KC_ENT), KC_SPC, KC_RGUI, KC_LBRC, KC_RBRC, MO(_RAISE)
-),
-
-/* Mac
- */
-[_MAC] = LAYOUT_ortho_5x12(
-  _______, _______, _______, _______, _______, _______,             _______, _______, _______, _______, _______, _______,
-  _______, _______, _______, _______, _______, _______,             _______, _______, _______, _______, _______, _______,
-  _______, _______, _______, _______, _______, _______,             _______, _______, _______, _______, _______, _______,
-  _______, _______, _______, _______, _______, _______,             _______, _______, _______, _______, _______, _______,
-  KC_LGUI, _______, _______, _______, _______, MT(MOD_LGUI,KC_DEL), _______, _______, KC_RCTL, _______, _______, _______
+  KC_ESC, LCTL_T(KC_A), LALT_T(KC_S), LGUI_T(KC_D), LSFT_T(KC_F), KC_G, KC_H, RSFT_T(KC_J), RGUI_T(KC_K), RALT_T(KC_L), RCTL_T(KC_SCLN), KC_QUOT,
+  _______, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, _______,
+  KC_LCTL, KC_GRV, KC_CAPS, KC_LALT, KC_BSPC, KC_DEL, LT(_LOWER,KC_ENT), KC_SPC, KC_RGUI, KC_LBRC, KC_RBRC, MO(_RAISE)
 ),
 
 /* Lower
@@ -69,10 +59,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Raise
  */
 [_RAISE] = LAYOUT_ortho_5x12(
-  _______, QK_RBT,  DB_TOGG,      RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI,  RGB_SAD, RGB_VAI, RGB_VAD, _______,
+  _______, QK_RBT,  CG_SWAP,      RGB_TOG, RGB_MOD, RGB_HUI, RGB_HUD, RGB_SAI,  RGB_SAD, RGB_VAI, RGB_VAD, _______,
   _______, _______, QK_DEF_LAYER, _______, _______, _______, _______, _______,  _______, _______, _______, _______,
   _______, _______, _______,      _______, _______, _______, _______, _______,  _______, _______, _______, _______,
-  _______, _______, _______,      _______, _______, _______, _______, DF(_MAC), _______, _______, _______, _______,
+  _______, _______, _______,      _______, _______, _______, _______, CG_NORM, _______, _______, _______, _______,
   _______, _______, _______,      _______, _______, _______, _______, _______,  _______, _______, _______, _______
 )
 
