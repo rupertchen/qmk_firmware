@@ -14,6 +14,6 @@
 // b a 9
 // 6 7 8
 //
-#define RGBLIGHT_LED_MAP { 5, 0, 1, 2, 3, 4, 7, 8, 9, 10, 11, 6 }
+#define RGBLIGHT_LED_MAP { 1, 2, 3, 4, 5, 0, 11, 6, 7, 8, 9, 10 }
 #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_MODE_RAINBOW_SWIRL
 #define CHORDAL_HOLD
