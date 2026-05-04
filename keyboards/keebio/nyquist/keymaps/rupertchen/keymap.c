@@ -134,3 +134,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
   return true;
 }
+
+//const uint16_t PROGMEM fj_combo[] = {KC_F, KC_J, COMBO_END};
+//
+//combo_t key_combos[] = {
+//    COMBO(fj_combo, CW_TOGG),
+//};
