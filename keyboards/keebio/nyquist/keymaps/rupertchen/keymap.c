@@ -9,7 +9,6 @@
 // entirely and just use numbers.
 enum layer_names {
     _BASE,
-    _MAC,
     _LOWER,
     _RAISE,
     _ADJUST
@@ -17,7 +16,6 @@ enum layer_names {
 
 enum custom_keycodes {
   BASE = SAFE_RANGE,
-  MAC,
   LOWER,
   RAISE,
   ADJUST,
@@ -102,15 +100,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           PLAY_SONG(tone_qwerty);
         #endif
         set_single_persistent_default_layer(_BASE);
-      }
-      return false;
-      break;
-    case MAC:
-      if (record->event.pressed) {
-        #ifdef AUDIO_ENABLE
-          PLAY_SONG(tone_colemak);
-        #endif
-        set_single_persistent_default_layer(_MAC);
       }
       return false;
       break;
